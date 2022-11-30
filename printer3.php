@@ -1,13 +1,10 @@
 <?php
 
 # connection to DB
-define("DB_HOST", 'turing.cs.olemiss.edu');
+define("DB_HOST", 'localhost');
 define("DB_DATABASE", 'printers');
 define("DB_USERNAME", 'jato');
-define("DB_PASSWORD", 'jt11292022');
-
-// connect to database
-$conn = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+define("DB_PASSWORD", 'cheese7100');
 
 // check connection
 if (!$conn) {
@@ -83,7 +80,6 @@ if (!$conn) {
                     <li><a href="printer3.php">Adler South</a></li>
                     <li><a href="printer2.php">Weir 209</a></li>
                     <li><a href="printer3.php">Weir 232</a></li>
-                    <li><a href="jhlucas1@olemiss.edu">Contact Jeff</a></li>
                 </ul>
             </div>
         </nav>
@@ -95,7 +91,7 @@ if (!$conn) {
 
     <?php
 
-    $sql = "SELECT * FROM printer1supplies LIMIT 1";
+    $sql = "SELECT * FROM printer3supplies LIMIT 1";
 
     $result = mysqli_query($conn, $sql);
 
@@ -107,7 +103,7 @@ if (!$conn) {
     }
 
 
-    $sql = "SELECT * FROM printer1supplies ORDER BY ink DESC LIMIT 1";
+    $sql = "SELECT * FROM printer3supplies ORDER BY ink DESC LIMIT 1";
 
     $result = mysqli_query($conn, $sql);
 
@@ -141,7 +137,7 @@ if (!$conn) {
 
             <?php
 
-            $sql = "SELECT * FROM printer1";
+            $sql = "SELECT * FROM printer3";
 
             $result = mysqli_query($conn, $sql);
 
